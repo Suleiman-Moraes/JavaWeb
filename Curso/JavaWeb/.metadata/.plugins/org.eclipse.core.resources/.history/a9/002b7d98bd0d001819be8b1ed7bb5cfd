@@ -1,0 +1,11 @@
+package unidade2.persistencia;
+
+import java.sql.SQLException;
+
+import unidade2.model.Cliente;
+
+public class ClienteDAO implements IPersistencia, CriaCliente{
+
+	private Cliente cliente = null;
+	
+}

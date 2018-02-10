@@ -1,0 +1,12 @@
+package unidade2.persistencia;
+
+import java.sql.SQLException;
+
+public interface IPersistencia<T> {
+	String novo(T t)throws SQLException;
+	String delete(long codigo)throws SQLException;
+	String alterar(T t)throws SQLException;
+	String visualisarUm(long codigo)throws SQLException;
+	String visualisarTodos()throws SQLException;
+	boolean exixte(long codigo)throws SQLException;
+}

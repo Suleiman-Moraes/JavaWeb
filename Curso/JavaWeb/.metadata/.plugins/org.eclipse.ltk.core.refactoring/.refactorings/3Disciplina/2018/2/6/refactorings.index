@@ -1,0 +1,18 @@
+1518205370298	Delete element
+1518206481236	Rename field 'clienteDAO'
+1518206487910	Rename field 'cliente'
+1518206564502	Rename method 'pegarCpf'
+1518264834609	Copy compilation unit
+1518265143101	Copy compilation unit
+1518265295345	Infer generic type arguments
+1518265516851	Copy compilation unit
+1518270404654	Copy compilation unit
+1518270437493	Copy compilation unit
+1518270451983	Infer generic type arguments
+1518270721610	Copy compilation unit
+1518271109597	Rename field 'cpf'
+1518271139085	Rename field 'email'
+1518271204767	Rename field 'cliente'
+1518271213662	Rename field 'clienteDAO'
+1518271388662	Rename method 'pegarCpf'
+1518271400948	Rename method 'criarCliente'

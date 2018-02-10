@@ -1,0 +1,83 @@
+package com.moraes;
+
+import java.util.Scanner;
+
+public class Main implements {
+	static Scanner leia = new Scanner(System.in);
+	
+	static long cpf = 0;
+	static String nome = ""; 
+	static String email = "";
+	
+	static Cliente cliente;
+	static ClienteDAO clienteDAO;
+	
+	public static void main(String[] args) {
+		char op = '0';
+		
+		
+		
+	}
+	
+	private static void criarCliente() throws Exception {
+    	System.out.println("Nome: ");
+    	nome = leia.nextLine();
+    	System.out.println("Email: ");
+    	email = leia.nextLine();
+    	System.out.println("CPF: ");
+    	cpf = leia.nextLong();
+		
+		cliente = new Cliente(cpf, nome , email);
+    }
+    private static long pegarCpf() {
+    	System.out.println("CPF: ");
+    	return leia.nextLong();
+    }
+    private static int combobox() {
+    	System.out.println("\n\n\nSistema de gerencialmente de Clientes\n"
+				+ "==================================================================================");
+		System.out.println("Digite [1] para Consultar Todos os Clientes");
+		System.out.println("Digite [2] para Consultar um Cliente Especifico");
+		System.out.println("Digite [3] para Cadastrar um novo Cliente");
+		System.out.println("Digite [4] para Alterar um Cliente");
+		System.out.println("Digite [5] para Excluir um Cliente");
+		System.out.println("Digite [!(Número)] para Sair\n"
+				+ "==================================================================================");
+		return leia.next().charAt(0);
+    }
+    private static String chamaMetodo(int combobox) throws Exception {
+    	switch (combobox) {
+		case 1:{
+			criarCliente();
+			clienteDAO = new ClienteDAO(cliente);
+			return clienteDAO.insert();
+		}
+		case 2:{
+			clienteDAO = new ClienteDAO();
+			return clienteDAO.delete(pegarCpf());
+		}
+		case 3:{
+			criarCliente();
+			clienteDAO = new ClienteDAO(cliente);
+			return clienteDAO.alterar();
+		}
+		case 4:{
+			clienteDAO = new ClienteDAO();
+			return clienteDAO.visualisarUm(pegarCpf());
+		}
+		case 5:{
+			clienteDAO = new ClienteDAO();
+			return clienteDAO.visualisarTodos();
+		}
+		default : {return "";}
+    	}
+    	
+    }
+    private static void saida(String texto) {
+    	limpar();
+    	jTextAreaSaida.setText(texto);
+    }
+    private static void limpar() {
+    	jTextAreaSaida.setText("");
+    }
+}

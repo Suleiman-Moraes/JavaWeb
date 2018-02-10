@@ -1,0 +1,13 @@
+package com.moraes;
+
+import java.sql.SQLException;
+
+public interface IPersistencia {
+	String novo()throws SQLException;
+	String delete(long codigo)throws SQLException;
+	String alterar()throws SQLException;
+	String visualisarUm(long codigo)throws SQLException;
+	String visualisarTodos()throws SQLException;
+	boolean exixte(long codigo)throws SQLException;
+	void conectar() throws SQLException;
+}

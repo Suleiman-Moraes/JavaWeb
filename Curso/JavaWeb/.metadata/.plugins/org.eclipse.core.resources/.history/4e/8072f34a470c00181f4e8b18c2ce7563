@@ -1,0 +1,88 @@
+package unidade2;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class ClienteApp {
+	
+	static String url = "jdbc:oracle:thin:@localhost:1521:XE";
+	static String usuario = "curso_java";
+	static String senha = "schema";
+	static Connection conexao;
+	static Scanner leia = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		try {
+			conectar();
+			
+			int opcao = 0;
+			long cpf = 0;
+			String nome = ""; 
+			String email = "";
+			
+			System.out.println("Sistema de gerencialmente de Clientes\n"
+					+ "==================================================================================");
+			System.out.println("Digite [1] para Consultar Todos os Clientes");
+			System.out.println("Digite [2] para Consultar um Cliente Especifico");
+			System.out.println("Digite [3] para Consultar um novo Cliente");
+			System.out.println("Digite [4] para Alterar um Cliente");
+			System.out.println("Digite [5] para Excluir um Cliente");
+			System.out.println("Digite [!(Número)] para Sair");
+		} catch (Exception e) {
+			System.out.println("Fim!");
+		}
+	}
+	
+	public static void conectar() throws SQLException {
+		conexao = DriverManager.getConnection(url, usuario, senha);
+		conexao.setAutoCommit(false);
+	}
+	
+	public static void desconectar() throws SQLException {conexao.close();}
+	
+	public static void cunsultarTodos() throws SQLException {
+		String sql = "SELECT * FROM cliente";
+		Statement statement = conexao.createStatement();
+		ResultSet rs = statement.executeQuery(sql);
+		byte cont =(byte) rs.getRow();
+		while (rs.next()) {
+			System.out.println("CPF: " + rs.getInt(1) + "\nNome: " + rs.getString(2) + "\nEmail: " + rs.getString(3) + "\n");
+			System.out.println("=================================================================\n\n");
+		}
+		System.out.println("Numero de clientes listados: "+ cont + "\n\n");
+	}
+	
+	public static void cunsultar(long cpf) throws SQLException {
+		String sql = "SELECT * FROM cliente where cpf="+cpf;
+		Statement statement = conexao.createStatement();
+		ResultSet rs = statement.executeQuery(sql);
+		while (rs.next()) 
+			System.out.println("CPF: " + rs.getInt(1) + "\nNome: " + rs.getString(2) + "\nEmail: " + rs.getString(3));
+	}
+	
+	public static void inserir(long cpf, String nome, String email) throws SQLException {
+		String sql = "insert into cliente values ("+cpf+",'"+nome+"','"+email+"')";
+		Statement statement = conexao.createStatement();
+		statement.execute(sql);
+		conexao.commit();
+	}
+	
+	public static void alterar(long cpf, String nome, String email) throws SQLException {
+		String sql = "update cliente set nome='"+nome+"',email='"+email+"' where cpf="+cpf;
+		Statement statement = conexao.createStatement();
+		statement.executeUpdate(sql);
+		conexao.commit();
+	}
+	
+	public static void excluir(long cpf) throws SQLException {
+		String sql = "delete from cliente where cpf="+cpf;
+		Statement statement = conexao.createStatement();
+		statement.executeUpdate(sql);
+		conexao.commit();
+	}
+	
+}
