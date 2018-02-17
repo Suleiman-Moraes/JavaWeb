@@ -1,0 +1,7 @@
+package com.moraes;
+
+public class Pagamento {
+	private long cpf;
+	private long cdCurso;
+	private Data data;
+}

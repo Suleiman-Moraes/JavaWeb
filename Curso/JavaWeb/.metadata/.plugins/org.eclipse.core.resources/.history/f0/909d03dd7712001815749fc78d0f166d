@@ -1,0 +1,8 @@
+package com.moraes;
+
+public class Snippet {
+	public static void main(String[] args) {
+		
+	}
+}
+

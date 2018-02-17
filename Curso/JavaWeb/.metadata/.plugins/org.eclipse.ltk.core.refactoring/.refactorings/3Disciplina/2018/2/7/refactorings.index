@@ -1,0 +1,9 @@
+1518716835929	Rename type 'Main'
+1518716864480	Rename type 'Main2'
+1518719297251	Rename local variable 'data'
+1518724531521	Delete element
+1518725608638	Rename field 'nome'
+1518725623468	Rename field 'email'
+1518725750141	Rename field 'clienteDAO'
+1518725757563	Rename field 'cliente'
+1518725877135	Rename method 'criarCliente'

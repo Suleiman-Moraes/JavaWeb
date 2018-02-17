@@ -1,0 +1,19 @@
+package com.moraes;
+
+public class Pagamento {
+	private long cpf;
+	private long cdCurso;
+	private Data data;
+	
+	public Pagamento(long cpf, long cdCurso, String data) throws Exception {
+		this.cpf = cpf;
+		this.cdCurso = cdCurso;
+		this.data = new Data(data);
+	}
+	public Pagamento() {}
+	public Pagamento(Pagamento objeto) throws Exception {
+		this.cpf = objeto.cpf;
+		this.cdCurso = objeto.cdCurso;
+		this.data = new Data(objeto.data);
+	}
+}

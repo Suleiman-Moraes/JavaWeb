@@ -1,0 +1,18 @@
+package com.moraes;
+
+import oracle.sql.DATE;
+
+public class Data {
+	String data;
+	
+	public boolean validaData(String texto) {
+		if(!texto.matches("\\d{2}/\\d{2}/\\d{4}")) return false;
+		String[] vet = texto.split("/");
+		if (vet.length != 3) return false;
+		return true;
+	}
+	public static void main(String[] args) {
+		Data data = new Data();
+		System.out.println(data.validaData("21/02/19987"));
+	}
+}

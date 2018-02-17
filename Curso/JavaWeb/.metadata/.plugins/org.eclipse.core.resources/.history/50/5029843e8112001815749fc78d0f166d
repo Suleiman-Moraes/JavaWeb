@@ -1,0 +1,44 @@
+package com.moraes;
+
+import java.util.Scanner;
+
+public class Data {
+	String data = "";
+	String dia = "";
+	String mes = "";
+	String ano = "";
+	
+	public void validaData(String texto) throws Exception {
+		if(!texto.matches("\\d{2}/\\d{2}/\\d{4}")) throw new Exception("Formato Inválido de \"Data\"!");
+		String[] vet = texto.split("/");
+		int[] veto = new int[3];
+		
+		for (int i = 0; i < veto.length; i++) 
+			veto[i] = Integer.parseInt(vet[i]);
+		
+		if (veto[0] >= 31 || veto[0] <=0) throw new Exception("\"Dia\" inexistente!"); 
+		
+		if (veto[1] >= 12 || veto[1] <=0) throw new Exception("\"Mês\" inexistente!");
+		
+		if (veto[3] <= 0) throw new Exception("\"Ano\" inexistente!");
+		
+	}
+	
+	
+	
+	
+	public static void main(String[] args) {
+		try {
+			Scanner leia = new Scanner(System.in);
+			String texto = "";
+			Data data = new Data();
+			System.out.println("Digite");
+			texto = leia.next();
+			data.validaData(texto);
+			main(null);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			main(null);
+		}
+	}
+}
