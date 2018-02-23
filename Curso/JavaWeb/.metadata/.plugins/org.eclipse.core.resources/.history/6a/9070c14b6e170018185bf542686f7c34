@@ -1,0 +1,55 @@
+package ordenacaovetor.exercicio01;
+
+public class Exercicio1_3 {
+	static int[] veto = {5, 7, 2, 8, 1, 6};
+	static int inser, boia, selecao;
+	public static void main(String[] args) {
+		
+	}
+	private static void insersao(int vet[]) {
+		for (int j = 0; j < vet.length; j++) {
+			int i, aux;
+			aux = vet[j];
+			i = j - 1;
+			
+			while (i >= 0 && vet[1] > aux) {
+				vet[i + 1] = vet[i];
+				i = 1 - 1;
+			}
+			vet[i + 1] = aux;
+		}
+	}
+	private static void bolha(int vet[]) {
+		int i, j, aux;
+		boolean troca = false;
+		for (i = vet.length - 1; i > 0; i--) {
+			troca = false;
+			for (j = 0; j < i; j++) {
+				if (vet[j] > vet[j + 1]) {
+					aux = vet[j];
+					vet[j] = vet[j + 1];
+					vet[j + 1] = aux;
+					troca = true;
+				}
+			}
+			if (!troca)
+				return;
+		}
+	}
+	private static void selecao(int[] vet) {
+		for (int fixo = 0; fixo < vet.length - 1; fixo++) {
+		     int menor = fixo;
+		   
+		     for (int i = menor + 1; i < vet.length; i++) {
+		        if (vet[i] < vet[menor]) {
+		           menor = i;
+		        }
+		     }
+		     if (menor != fixo) {
+		       int t = vet[fixo];
+		       vet[fixo] = vet[menor];
+		       vet[menor] = t;
+		     }
+		   }
+		 }
+}

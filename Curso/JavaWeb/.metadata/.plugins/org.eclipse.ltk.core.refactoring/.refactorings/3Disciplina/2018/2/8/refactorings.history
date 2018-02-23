@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;MainCliente.java&apos; to &apos;Hibernate/src/com.moraes&apos;&#x0D;&#x0A;- Original project: &apos;3Disciplina&apos;&#x0D;&#x0A;- Destination element: &apos;Hibernate/src/com.moraes&apos;&#x0D;&#x0A;- Original element: &apos;com.moraes.MainCliente.java&apos;" description="Copy compilation unit" destination="=Hibernate/src&lt;com.moraes" element1="/src&lt;com.moraes{MainCliente.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1519324387362" units="1" version="1.0"/>
+</session>

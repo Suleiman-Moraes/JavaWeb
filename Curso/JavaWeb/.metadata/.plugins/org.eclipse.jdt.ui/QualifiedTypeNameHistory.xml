@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.swing.JFrame"/>
-<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
-<fullyQualifiedTypeName name="unidade6.JTFApp"/>
-<fullyQualifiedTypeName name="java.awt.Container"/>
 <fullyQualifiedTypeName name="javax.swing.JTextField"/>
 <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
 <fullyQualifiedTypeName name="unidade4.atividade.Jogador"/>
@@ -26,7 +22,6 @@
 <fullyQualifiedTypeName name="unidade2.interfacegrafica.ClienteGrafico"/>
 <fullyQualifiedTypeName name="unidade2.interfacegrafica.CursoGrafico"/>
 <fullyQualifiedTypeName name="unidade2.persistencia.CriaCliente"/>
-<fullyQualifiedTypeName name="java.lang.Long"/>
 <fullyQualifiedTypeName name="javax.swing.ComboBoxEditor"/>
 <fullyQualifiedTypeName name="unidade2.persistencia.ClienteDAO"/>
 <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
@@ -36,28 +31,33 @@
 <fullyQualifiedTypeName name="java.lang.Float"/>
 <fullyQualifiedTypeName name="unidade2.persistencia.IPersistencia"/>
 <fullyQualifiedTypeName name="unidade2.model.Cliente"/>
-<fullyQualifiedTypeName name="com.moraes.Cliente"/>
 <fullyQualifiedTypeName name="com.moraes.ClienteDAO"/>
 <fullyQualifiedTypeName name="com.moraes.CriaCliente"/>
 <fullyQualifiedTypeName name="com.moraes.CriaCurso"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.moraes.Curso"/>
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="com.moraes.Main"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="javax.annotation.PostConstruct"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="oracle.jdbc.proxy.annotation.Post"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="com.moraes.IPersistencia"/>
 <fullyQualifiedTypeName name="com.moraes.Data"/>
 <fullyQualifiedTypeName name="java.lang.Deprecated"/>
-<fullyQualifiedTypeName name="com.moraes.Pagamento"/>
 <fullyQualifiedTypeName name="com.moraes.PagamentoDAO"/>
-<fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="java.text.DateFormat"/>
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
 <fullyQualifiedTypeName name="oracle.sql.DATE"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="org.hibernate.cfg.Configuration"/>
+<fullyQualifiedTypeName name="org.hibernate.Session"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.moraes.Cliente"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.lang.Long"/>
+<fullyQualifiedTypeName name="com.moraes.Pagamento"/>
+<fullyQualifiedTypeName name="com.moraes.PagamentoId"/>
 </qualifiedTypeNameHistroy>
